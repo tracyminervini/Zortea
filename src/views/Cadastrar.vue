@@ -48,7 +48,7 @@
           />
           <div v-if="v$.form.password.$error">Password Invalido</div>
 
-          <button type="button" class="btn btn-primary mt-5" style="min-width: 320px" @click="cadastrar">Cadastrar</button>
+          <button type="button" class="btn btn-primary mt-5" style="min-width: 300px" @click="cadastrar">Cadastrar</button>
         </div>
       </div>
     </div>
