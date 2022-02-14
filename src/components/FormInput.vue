@@ -1,6 +1,12 @@
 <template>
   <label :class="labelClass">{{ label }}</label>
-  <input :type="type" :class="inputClass" :value="value" @input="$emit('input', $event.target.value)" />
+  <input
+    :type="type"
+    :class="inputClass"
+    :placeholder="placeholder"
+    :value="modelValue"
+    @input="$emit('update:modelValue', $event.target.value)"
+  />
 </template>
 
 <script>
@@ -32,7 +38,7 @@ export default {
       require: false,
       default: ""
     },
-    value: {
+    modelValue: {
       type: String,
       default: "",
       required: true,
