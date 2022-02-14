@@ -163,4 +163,10 @@ export default {
   width: 800px;
   height: 600px;
 }
+
+a{
+  margin-right: 170px;
+  margin-bottom: 25px;
+}
+
 </style>

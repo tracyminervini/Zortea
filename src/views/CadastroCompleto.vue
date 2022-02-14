@@ -1,4 +1,5 @@
 <template>
+<div class="container-fluid">
   <h2 class="text-center mt-2 pt-2 pb-2">Cadastro de Fornecedores</h2>
 
   <div class="col-6">
@@ -31,7 +32,12 @@
       </div>
       <div clas="form-group">
         <label for="name">CPF</label>
-        <input class="form-control mb-3" type="text" />
+        <input
+          class="form-control mb-3"
+          type="text"
+          v-model="cpf"
+          v-mask="'###.###.###-##'"
+        />
       </div>
       <div clas="form-group">
         <label for="name">Endereço</label>
@@ -91,11 +97,21 @@
 
       <div clas="form-group ">
         <label>CNPJ</label>
-        <input class="form-control mb-3" type="text" />
+        <input
+          class="form-control mb-3"
+          type="text"
+          v-model="cnpj"
+          v-mask="'##.###.###/####-##'"
+        />
       </div>
       <div clas="form-group">
         <label>I.E</label>
-        <input class="form-control mb-3" type="text" />
+        <input
+          class="form-control mb-3"
+          type="text"
+          v-model="ie"
+          v-mask="'##.###.###-#'"
+        />
       </div>
 
       <div clas="form-group">
@@ -148,24 +164,27 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <center>
-    <button
-      type="button"
-      class="btn btn-outline-primary "
-      @click="cadastrar"
-    >
-      Cadastrar
-    </button>
-    <button
-      type="button"
-      class="btn btn-outline-danger"
-      @click="Limpar"
-    >
-      Limpar
-    </button>
-    </center>
-  </div>
+  <form>
+    <div class="row">
+      <center>
+        <button
+          type="submit"
+          class="btn btn-outline-primary"
+          @click="cadastrar"
+        >
+          Cadastrar
+        </button>
+
+        <button 
+        type="reset" 
+        class="btn btn-outline-danger" 
+        @click="Limpar()">
+          Limpar
+        </button>
+      </center>
+    </div>
+  </form>
+ </div>
 </template>
 
 <script>
@@ -181,6 +200,9 @@ export default {
       form: {
         email: "",
         password: "",
+        cnpj: "",
+        ie: "",
+        cpf: "",
       },
     };
   },
@@ -207,17 +229,23 @@ export default {
 <style scoped>
 * {
   margin: 0 auto;
+  
 }
 h2 {
   background-color: #2c3e50;
   color: #ffffff;
   font-size: 30px;
   font-weight: 800;
+
+}
+.container-fluid {
+  background-color: #f2f2f2;
 }
 
 #juridica {
   padding-top: 23px;
   padding-left: 25px;
+
 }
 #fisica {
   padding-top: 5px;
@@ -231,7 +259,5 @@ h2 {
 .btn-outline-danger {
   width: 150px;
   margin-right: 35px;
-  
-   
 }
 </style>
