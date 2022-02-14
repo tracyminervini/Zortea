@@ -40,7 +40,7 @@
         />
       </div>
       <div clas="form-group">
-        <label for="name">Endereço</label>
+        <label for="name">Rua, Nº</label>
         <input class="form-control mb-3" type="text" />
       </div>
       <div clas="form-group">
@@ -115,7 +115,7 @@
       </div>
 
       <div clas="form-group">
-        <label for="name">Endereço</label>
+        <label for="name">Rua, Nº</label>
         <input class="form-control mb-3" type="text" />
       </div>
       <div clas="form-group">

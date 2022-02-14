@@ -6,16 +6,16 @@
       </div>
 
       <div class="col">
-        <h1 class="text-center mt-5 ms-5">Faça o seu cadastro</h1>
+        <h1 class="text-center mt-5">Faça o seu cadastro</h1>
         <div class="col-md-6 offset-md-3 col-sm-5 mt-4">
           <form-input
             labelClass="label pb-1"
             inputClass="form-control"
-            label="Nome / Razão Social"
+            label="Nome / Razao Social"
             placeholder="Digite o Nome / Razao Social"
             v-model="form.nomeRazaoSocial"
           />
-          <div v-if="v$.form.nomeRazaoSocial.$error">Nome/Razao Social Invalido</div>
+          <div v-if="v$.form.nomeRazaoSocial.$error">Nome/Razao Social Inválido</div>
         </div>
         <div class="col-md-6 offset-md-3 col-sm-5 mt-3">
           <form-input
@@ -25,7 +25,7 @@
             placeholder="CPF / CNPJ"
             v-model="form.cpfCnpj"
           />
-          <div v-if="v$.form.cpfCnpj.$error">CPF/CNPJ Invalido</div>
+          <div v-if="v$.form.cpfCnpj.$error">CPF/CNPJ Inválido</div>
         </div>
         <div class="col-md-6 offset-md-3 col-sm-5 mt-3">
           <form-input
@@ -35,7 +35,7 @@
             placeholder="Email"
             v-model="form.email"
           />
-          <div v-if="v$.form.email.$error">Email Invalido</div>
+          <div v-if="v$.form.email.$error">Email Inválido</div>
         </div>
         <div class="col-md-6 offset-md-3 col-sm-5 mt-3">
           <form-input
@@ -46,9 +46,9 @@
             placeholder="Digite sua senha"
             v-model="form.email"
           />
-          <div v-if="v$.form.password.$error">Password Invalido</div>
+          <div v-if="v$.form.password.$error">Senha Inválida</div>
 
-          <button type="button" class="btn btn-primary mt-5" style="min-width: 300px" @click="cadastrar">Cadastrar</button>
+          <button type="button" class="btn btn-primary mt-5" style="min-width: 320px" @click="cadastrar">Cadastrar</button>
         </div>
       </div>
     </div>
@@ -123,7 +123,7 @@ export default {
       window.localStorage.setItem(this.form.email, JSON.stringify(this.form));
 
       // Estando tudo certo vai para a pagina de cadastro completo passando o email como parametro
-      this.$router.push({ path: '/cadastrocompleto', params: { email: this.form.email } });
+      this.$router.push({ path: '/cadastrocompleto:email', params: { email: this.form.email } });
     },
   },
 };
