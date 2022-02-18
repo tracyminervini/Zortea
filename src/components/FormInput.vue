@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     type: {
@@ -36,7 +35,7 @@ export default {
     placeholder: {
       type: String,
       require: false,
-      default: ""
+      default: "",
     },
     modelValue: {
       type: String,
