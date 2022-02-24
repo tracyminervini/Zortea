@@ -4,7 +4,7 @@ Teste prático para programador Front-end, realizei esse teste para fins didáti
 Regras impostas no desafio.
 
  1) Criação de tela de login.
- 2) Criação de tela de cadastro sinplificada.
+ 2) Criação de tela de cadastro simplificada.
  3) Criação de tela de cadastro completo.
  4) Retornar os dados do usuário
 Opcional:
