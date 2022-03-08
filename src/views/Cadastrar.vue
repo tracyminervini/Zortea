@@ -6,30 +6,33 @@
       </div>
 
       <div class="col">
-        <h1 class="text-center mt-5 ms-5">Faça o seu cadastro</h1>
+        <h1 class="text-center mt-5">Faça o seu cadastro</h1>
         <div class="col-md-6 offset-md-3 col-sm-5 mt-4">
           <form-input
-            labelClass="label pb-1"
+            labelClass="label pb-1 ps-2"
             inputClass="form-control"
             label="Nome / Razão Social"
-            placeholder="Digite o Nome / Razao Social"
+            placeholder="Digite o Nome / Razão Social"
+            type="text"
             v-model="form.nomeRazaoSocial"
           />
           <div v-if="v$.form.nomeRazaoSocial.$error">Nome/Razao Social Invalido</div>
         </div>
+
         <div class="col-md-6 offset-md-3 col-sm-5 mt-3">
           <form-input
-            labelClass="label pb-1"
+            labelClass="label pb-1 ps-2"
             inputClass="form-control"
             label="CPF / CNPJ"
             placeholder="CPF / CNPJ"
-            v-model="form.cpfCnpj"
+            v-model="form.cpfCnpj" 
           />
           <div v-if="v$.form.cpfCnpj.$error">CPF/CNPJ Invalido</div>
         </div>
+        
         <div class="col-md-6 offset-md-3 col-sm-5 mt-3">
           <form-input
-            labelClass="label pb-1"
+            labelClass="label pb-1 ps-2"
             inputClass="form-control"
             label="Email"
             placeholder="Email"
@@ -39,16 +42,19 @@
         </div>
         <div class="col-md-6 offset-md-3 col-sm-5 mt-3">
           <form-input
-            labelClass="label pb-1"
+            labelClass="label pb-1 ps-2"
             inputClass="form-control"
             label="Senha"
             type="password"
             placeholder="Digite sua senha"
             v-model="form.password"
+          
           />
           <div v-if="v$.form.password.$error">Password Invalido</div>
 
-          <button type="button" class="btn btn-primary mt-5" style="min-width: 300px" @click="cadastrar">Cadastrar</button>
+          <button class="btn btn-primary mt-5" style="min-width: 325px" @click="cadastrar">Cadastrar</button>
+
+          
         </div>
       </div>
     </div>
@@ -143,5 +149,15 @@ label {
 .img-create {
   width: 700px;
   height: 500px;
+}
+button {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+button:hover {
+  box-shadow: 0 0 5px 0 #3498db inset, 0 0 5px 4px #3498db;
 }
 </style>
